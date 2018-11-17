@@ -22,10 +22,13 @@ function [] = anandita ()
 
   #nitin("./slot grinding/N/12000_30_20_slot.lvm", 135, 137, 0.01, M, 3, "F_x", 3, 1, 24000, 30, 20, tool);
 
-  #nitin("./slot grinding/N/12000_30_20_slot.lvm", 89.5, 91, 0.02, M, 2, "F_y", 10, 1, 12000, 30, 20, tool);
+  #nitin("./slot grinding/N/12000_30_20_slot.lvm", 89.5, 91, 0.05, M, 2, "F_y", 10, 1, 12000, 30, 20, tool);
   #nitin("./slot grinding/N/24000_30_20_slot.lvm", 88.5, 90, 0.05, M, 2, "F_y", 1, 1, 24000, 30, 20, tool);
   #nitin("./slot grinding/N/36000_30_20_slot.lvm", 87.5, 90, 0.05, M, 2, "F_y", 1, 1, 36000, 30, 20, tool);
   #nitin("./slot grinding/N/48000_30_20_slot.lvm", 87, 88.5, 0.05, M, 2, "F_y", 1, 1, 48000, 30, 20, tool);
+  #nitin("./slot grinding/N/60000_30_20_slot.lvm", 87.2, 88.5, 0.05, M, 2, "F_y", 1, 1, 60000, 30, 20, tool);
+  #nitin("./slot grinding/N/24000_30_30_slot.lvm", 87, 89, 0.05, M, 2, "F_y", 1, 1, 24000, 30, 30, tool);
+  #nitin("./slot grinding/N/24000_30_40_slot.lvm", 88, 91, 0.05, M, 2, "F_y", 3, 1, 24000, 30, 40, tool);
   
 
   # Y-direction bare forces
@@ -33,4 +36,8 @@ function [] = anandita ()
   #abhinav("./slot grinding/N/24000_30_20_slot.lvm", 88.5, 2, M, 2, 1);
   #abhinav("./slot grinding/N/36000_30_20_slot.lvm", 87.5, 2, M, 2, 1);
   #abhinav("./slot grinding/N/48000_30_20_slot.lvm", 87, 2, M, 2, 1);
+  #abhinav("./slot grinding/N/60000_30_20_slot.lvm", 87.2, 2, M, 2, 1);
+  #abhinav("./slot grinding/N/24000_30_30_slot.lvm", 85, 20, M, 2, 10);
+  #abhinav("./slot grinding/N/24000_30_40_slot.lvm", 88, 4, M, 2, 1);
+
 endfunction
