@@ -56,7 +56,7 @@ function [force] = nitin (filename, bias, bias_end, range, scaling, column, coln
   # Scale  
   a(:, COLUMN) *= SCALING;
   b(:, COLUMN) *= SCALING;
-  #b(:, COLUMN) += 1.7;
+  #b(:, COLUMN) += 1;
   
   # Construct title
   my_title = strcat(colname, " vs t (", tool, ")\n");
