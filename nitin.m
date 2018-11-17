@@ -60,8 +60,8 @@ function [force] = nitin (filename, bias, bias_end, range, scaling, column, coln
   
   # Construct title
   my_title = strcat(colname, " vs t (", tool, ")\n");
-  my_title = strcat(my_title, "f=", num2str(feed), "x10^{-6} m/s, d=", num2str(doc));
-  my_title = strcat(my_title, "x10^{-6} m, rpm=", num2str(rpm));
+  my_title = strcat(my_title, "f=", num2str(feed), "e-6 m/s, d=", num2str(doc));
+  my_title = strcat(my_title, "e-6 m, rpm=", num2str(rpm));
   title(my_title, "fontsize", 12);
   
   # Set axes labels
@@ -113,7 +113,7 @@ function [force] = nitin (filename, bias, bias_end, range, scaling, column, coln
   hold off;
   
   # Save the plot
-  print("-dpng", strcat(filename, ".png"));
+  print("-dpng", strcat(filename, "_", colname, ".png"));
   
   # Return and print mean of force
   force = mean(ief)
