@@ -1,5 +1,5 @@
 # ME 338 Project: Microgrinding
-This project aims to experimentally study forces and surface roughness with varying parameters in micro-grinding.
+This project aims to experimentally study forces and surface roughness with varying parameters in micro-grinding. All code is tested and is meant to be run using GNU Octave 4.2.2. Since it might use Octave specific syntax, the code might not want to run under MATLAB.
 
 ## Usage
 There are 3 functions:
