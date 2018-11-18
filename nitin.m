@@ -1,20 +1,11 @@
-## Copyright (C) 2018 varun
-## 
-## This program is free software; you can redistribute it and/or modify it
-## under the terms of the GNU General Public License as published by
-## the Free Software Foundation; either version 3 of the License, or
-## (at your option) any later version.
-## 
-## This program is distributed in the hope that it will be useful,
-## but WITHOUT ANY WARRANTY; without even the implied warranty of
-## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-## GNU General Public License for more details.
-## 
-## You should have received a copy of the GNU General Public License
-## along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
+## I dedicate any and all copyright interest in this software to the
+## public domain. I make this dedication for the benefit of the public at
+## large and to the detriment of my heirs and successors. I intend this
+## dedication to be an overt act of relinquishment in perpetuity of all
+## present and future rights to this software under copyright law.
+##
 ## Author: Varun Patil <radialapps@gmail.com>
-## Created: 2018-11-18
+## Created: 2018-11-17
 
 function [force] = nitin (filename, bias, bias_end, range, scaling, column, colname, phase, skip, rpm, feed, doc, tool)
 

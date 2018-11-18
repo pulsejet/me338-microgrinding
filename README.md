@@ -8,7 +8,7 @@ There are 3 functions:
 3) `anandita()`: this function calls `nitin()` for each file input and outputs graphs for all files. All lines in this file should be commented by default, so graphs can be generated individually by default. It also contains useful ranges to observe in the commented `abhinav()` calls.
 
 ## License
-All code is licensed under GPLv3. Data from the experiments performed is not available for public usage.
+All code is dedicated to public domain. Feel free to use anything (if you can, that is) without worries! Data from the experiments performed is not available for public usage.
 
 ## Note
 If you're reading this, sorry for the atrocious function names (of course, any resemblance to actual persons, living or dead is purely coincidental), but I'm writing this with a day to go for CS 419's endsem and am just slightly below 100F.
