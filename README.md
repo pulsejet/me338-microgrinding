@@ -8,6 +8,9 @@ There are 4 functions:
 3) `anandita()`: this function calls `nitin()` for each file input and outputs graphs for all files. All lines in this file should be commented by default, so graphs can be generated individually by default. It also contains useful ranges to observe in the commented `abhinav()` calls.
 4) `vikrant(fmap)`: takes a map of filenames to forces (obtained from `anandita(false)`) and makes combined graphs of trends.
 
+## Results
+The resulting graphs obtained can be found in the [RESULTS](RESULTS) folder. For the individual force graphs, the naming convention is `RPM_FEED_DOC`.
+
 ## License
 All code is dedicated to public domain. Feel free to use anything (if you can, that is) without worries! Data from the experiments performed is not available for public usage.
 
