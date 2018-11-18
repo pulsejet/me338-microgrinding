@@ -54,11 +54,43 @@ function [force] = nitin (filename, bias, bias_end, range, scaling, column, coln
   b(:, COLUMN) *= SCALING;
   #b(:, COLUMN) += 1;
   
+  # Take fourier transforms  
+  af = fft(a(:, COLUMN));
+  bf = fft(b(:, COLUMN));
+  
+  # Plot FFT
+
+  %%Time specifications:
+  Fs = 10000;                    % samples per second
+  dt = 1/Fs;                     % seconds per sample
+  StopTime = range;              % seconds
+  t = (0:dt:StopTime-dt)';
+  N = size(t,1);
+
+  %%Fourier Transform:
+  X = fftshift(af);
+
+  %%Frequency specifications:
+  dF = Fs/N;                   % hertz
+  f = -Fs/2:dF:Fs/2;           % hertz
+
+  %%Plot the spectrum:
+  plot(f,abs(X)/N);
+  xlabel('Frequency (in hertz)');
+  
+  my_title = "";
+  my_title = strcat(my_title, "f=", num2str(feed), "e-6 m/s, d=", num2str(doc));
+  my_title = strcat(my_title, "e-6 m, rpm=", num2str(rpm));
+  title(strcat("Magnitude Response (", colname, ") \n ", my_title));
+
+  print("-dpng", strcat(filename, "_FFT_", colname, ".png"));
+  
+  figure;
+  
   if (doplot)
     # Construct title
-    my_title = strcat(colname, " vs t (", tool, ")\n");
-    my_title = strcat(my_title, "f=", num2str(feed), "e-6 m/s, d=", num2str(doc));
-    my_title = strcat(my_title, "e-6 m, rpm=", num2str(rpm));
+    my_title = strcat(colname, " vs t (", tool, ")\n", my_title);
+
     title(my_title, "fontsize", 12);
   
     # Set axes labels
@@ -73,10 +105,6 @@ function [force] = nitin (filename, bias, bias_end, range, scaling, column, coln
     plot(b(:,1), b(:,COLUMN), 'r')
     hold on;
   endif
-
-  # Take fourier transforms  
-  af = fft(a(:, COLUMN));
-  bf = fft(b(:, COLUMN));
 
   # Get differential signal (remove lf noise)
   df = af - bf;
@@ -118,7 +146,9 @@ function [force] = nitin (filename, bias, bias_end, range, scaling, column, coln
     # Save the plot
     print("-dpng", strcat(filename, "_", colname, ".png"));
   endif
-    
+
+  close all;  
+  
   # Return and print mean of force
   force = mean(ief);
 
