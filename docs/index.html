@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+
+<head>
+    <title>ME338 - Microgrinding Results</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .main {
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        img {
+            width: 46%;
+            max-width: 100%;
+            display: inline-block;
+        }
+
+        h1 {
+            text-decoration: underline;
+        }
+
+        .nav {
+            font-size: 1.2em;
+        }
+
+        .btt {
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            font-size: 1.2em;
+            color: blue;
+            border: 2px solid blue;
+            border-radius: 8px;
+            padding: 5px;
+            background-color: white;
+        }
+
+        @media (max-width: 768px) {
+            .main {
+                width: 98%;
+            }
+
+            img {
+                width: 98%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btt">
+        <a href="#top">Back To Top</a>
+    </div>
+
+    <div class="main" id="top">
+        <h2>Results of ME 338 Project - Microgrinding</h2>
+
+        <div class="nav">
+            <a href="https://github.com/pulsejet" target="_blank">Author of this page</a><br><br>
+            Jump to section:
+            <ul>
+                <li><a href="#avgf">Average Force</a></li>
+                <li><a href="#sr">Surface Roughness</a></li>
+                <li><a href="#fet">Forces (Electroplated Tool)</a></li>
+                <li><a href="#fmt">Forces (Metal Bonded Tool)</a></li>
+            </ul>
+        </div>
+
+        <h1 id="avgf">Average Force</h1>
+
+        <h3>Force vs RPM</h2>
+        <img src="Average Force Plots/COMB_RPM_F_y.png">
+        <img src="Average Force Plots/COMB_RPM_F_z.png">
+
+        <h3>Force vs Feed</h2>
+        <img src="Average Force Plots/COMB_FEED_F_y.png">
+        <img src="Average Force Plots/COMB_FEED_F_z.png">
+
+        <h3>Force vs Depth of Cut</h2>
+        <img src="Average Force Plots/COMB_DOC_F_y.png">
+        <img src="Average Force Plots/COMB_DOC_F_z.png">
+
+
+        <h1 id="sr">Average Surface Roughness</h1>
+        <img src="Surface Roughness/ROUGH_RPM.png">
+        <img src="Surface Roughness/ROUGH_FEED.png">
+        <img src="Surface Roughness/ROUGH_DOC.png">
+
+
+        <h1 id="fet">Forces (Electroplated Tool)</h1>
+        <img src="Forces - Electroplated Tool/12000_30_20_slot.lvm_F_y.png">
+        <img src="Forces - Electroplated Tool/12000_30_20_slot.lvm_F_z.png">
+        <img src="Forces - Electroplated Tool/24000_120_20_slot.lvm_F_y.png">
+        <img src="Forces - Electroplated Tool/24000_120_20_slot.lvm_F_z.png">
+        <img src="Forces - Electroplated Tool/24000_150_20_slot.lvm_F_y.png">
+        <img src="Forces - Electroplated Tool/24000_150_20_slot.lvm_F_z.png">
+        <img src="Forces - Electroplated Tool/24000_30_20_slot.lvm_F_y.png">
+        <img src="Forces - Electroplated Tool/24000_30_20_slot.lvm_F_z.png">
+        <img src="Forces - Electroplated Tool/24000_30_30_slot.lvm_F_y.png">
+        <img src="Forces - Electroplated Tool/24000_30_30_slot.lvm_F_z.png">
+        <img src="Forces - Electroplated Tool/24000_30_40_slot.lvm_F_y.png">
+        <img src="Forces - Electroplated Tool/24000_30_40_slot.lvm_F_z.png">
+        <img src="Forces - Electroplated Tool/24000_30_50_slot.lvm_F_y.png">
+        <img src="Forces - Electroplated Tool/24000_30_50_slot.lvm_F_z.png">
+        <img src="Forces - Electroplated Tool/24000_30_60_slot.lvm_F_y.png">
+        <img src="Forces - Electroplated Tool/24000_30_60_slot.lvm_F_z.png">
+        <img src="Forces - Electroplated Tool/24000_60_20_slot.lvm_F_y.png">
+        <img src="Forces - Electroplated Tool/24000_60_20_slot.lvm_F_z.png">
+        <img src="Forces - Electroplated Tool/24000_90_20_slot.lvm_F_y.png">
+        <img src="Forces - Electroplated Tool/24000_90_20_slot.lvm_F_z.png">
+        <img src="Forces - Electroplated Tool/36000_30_20_slot.lvm_F_y.png">
+        <img src="Forces - Electroplated Tool/36000_30_20_slot.lvm_F_z.png">
+        <img src="Forces - Electroplated Tool/48000_30_20_slot.lvm_F_y.png">
+        <img src="Forces - Electroplated Tool/48000_30_20_slot.lvm_F_z.png">
+        <img src="Forces - Electroplated Tool/60000_30_20_slot.lvm_F_y.png">
+        <img src="Forces - Electroplated Tool/60000_30_20_slot.lvm_F_z.png">
+
+
+        <h1 id="fmt">Forces (Metal Bonded Tool)</h1>
+        <img src="Forces - Metal Bonded Tool/12000_30_20.lvm_F_y.png">
+        <img src="Forces - Metal Bonded Tool/12000_30_20.lvm_F_z.png">
+        <img src="Forces - Metal Bonded Tool/24000_120_20.lvm_F_y.png">
+        <img src="Forces - Metal Bonded Tool/24000_120_20.lvm_F_z.png">
+        <img src="Forces - Metal Bonded Tool/24000_150_20.lvm_F_y.png">
+        <img src="Forces - Metal Bonded Tool/24000_150_20.lvm_F_z.png">
+        <img src="Forces - Metal Bonded Tool/24000_30_20.lvm_F_y.png">
+        <img src="Forces - Metal Bonded Tool/24000_30_20.lvm_F_z.png">
+        <img src="Forces - Metal Bonded Tool/24000_30_30.lvm_F_y.png">
+        <img src="Forces - Metal Bonded Tool/24000_30_30.lvm_F_z.png">
+        <img src="Forces - Metal Bonded Tool/24000_30_40.lvm_F_y.png">
+        <img src="Forces - Metal Bonded Tool/24000_30_40.lvm_F_z.png">
+        <img src="Forces - Metal Bonded Tool/24000_30_50.lvm_F_y.png">
+        <img src="Forces - Metal Bonded Tool/24000_30_50.lvm_F_z.png">
+        <img src="Forces - Metal Bonded Tool/24000_30_60.lvm_F_y.png">
+        <img src="Forces - Metal Bonded Tool/24000_30_60.lvm_F_z.png">
+        <img src="Forces - Metal Bonded Tool/24000_60_20.lvm_F_y.png">
+        <img src="Forces - Metal Bonded Tool/24000_60_20.lvm_F_z.png">
+        <img src="Forces - Metal Bonded Tool/24000_90_20.lvm_F_y.png">
+        <img src="Forces - Metal Bonded Tool/24000_90_20.lvm_F_z.png">
+        <img src="Forces - Metal Bonded Tool/36000_30_20.lvm_F_y.png">
+        <img src="Forces - Metal Bonded Tool/36000_30_20.lvm_F_z.png">
+        <img src="Forces - Metal Bonded Tool/48000_30_20.lvm_F_y.png">
+        <img src="Forces - Metal Bonded Tool/48000_30_20.lvm_F_z.png">
+        <img src="Forces - Metal Bonded Tool/60000_30_20.lvm_F_y.png">
+        <img src="Forces - Metal Bonded Tool/60000_30_20.lvm_F_z.png">
+
+    </div>
+</body>
