@@ -9,7 +9,7 @@ There are 4 functions:
 4) `vikrant(fmap)`: takes a map of filenames to forces (obtained from `anandita(false)`) and makes combined graphs of trends.
 
 ## Results
-The resulting graphs obtained can be found in the [RESULTS](RESULTS) folder. For the individual force graphs, the naming convention is `RPM_FEED_DOC`.
+The resulting graphs obtained can be found in the [docs](docs) folder or visit [this page](https://pulsejet.github.io/me338-microgrinding/). For the individual force graphs, the naming convention is `RPM_FEED_DOC`.
 
 ## License
 All code is dedicated to public domain. Feel free to use anything (if you can, that is) without worries! Data from the experiments performed is not available for public usage.
