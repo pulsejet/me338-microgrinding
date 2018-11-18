@@ -69,12 +69,12 @@ function [] = anandita ()
   #nitin("./slot grinding/Metal Bonded/07-11-2018/60000_30_20.lvm", 86, 94, 0.03, M, 2, "F_z", 2, 1, 60000, 30, 20, tool);
   #nitin("./slot grinding/Metal Bonded/07-11-2018/24000_30_30.lvm", 89, 92, 0.03, M, 2, "F_z", 6, 1, 24000, 30, 30, tool);
   #nitin("./slot grinding/Metal Bonded/07-11-2018/24000_30_40.lvm", 90, 92, 0.03, M, 2, "F_z", 7, 1, 24000, 30, 40, tool);
-  nitin("./slot grinding/Metal Bonded/07-11-2018/24000_30_50.lvm", 90, 92, 0.03, M, 2, "F_z", 7, 1, 24000, 30, 50, tool);
+  #nitin("./slot grinding/Metal Bonded/07-11-2018/24000_30_50.lvm", 90, 92, 0.03, M, 2, "F_z", 7, 1, 24000, 30, 50, tool);
   #nitin("./slot grinding/Metal Bonded/07-11-2018/24000_30_60.lvm", 90, 91.6, 0.03, M, 2, "F_z", 5, 1, 24000, 30, 60, tool);
   #nitin("./slot grinding/Metal Bonded/07-11-2018/24000_60_20.lvm", 44.5, 47, 0.03, M, 2, "F_z", 7, 1, 24000, 60, 20, tool);
   #nitin("./slot grinding/Metal Bonded/07-11-2018/24000_90_20.lvm", 33, 35, 0.03, M, 2, "F_z", 7, 1, 24000, 90, 20, tool);
   #nitin("./slot grinding/Metal Bonded/07-11-2018/24000_120_20.lvm", 26.3, 27.6, 0.03, M, 2, "F_z", 2, 1, 24000, 120, 20, tool);
-  #nitin("./slot grinding/Metal Bonded/07-11-2018/24000_150_20.lvm", 25.4, 26.8, 0.05, M, 2, "F_z", 5, 1, 24000, 150, 20, tool);
+  #nitin("./slot grinding/Metal Bonded/07-11-2018/24000_150_20.lvm", 25.4, 26.8, 0.03, M, 2, "F_z", 5, 1, 24000, 150, 20, tool);
   
 
   # Y-direction bare forces
