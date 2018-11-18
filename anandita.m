@@ -81,6 +81,10 @@ function [fmapy, fmapz] = anandita (doplot)
   forcesY(f) = nitin(f, 89.5, 91, 0.03, M, 3, "F_y", -1, 1, 24000, 30, 20, tool, doplot);
   forcesZ(f) = nitin(f, 89.5, 91, 0.03, M, 2, "F_z", 1, 1, 24000, 30, 20, tool, doplot);
 
+  f = "./slot grinding/Metal Bonded/07-11-2018/36000_30_20.lvm";
+  forcesY(f) = nitin(f, 89, 91.5, 0.03, M, 3, "F_y", 8, 1, 36000, 30, 20, tool, doplot);
+  forcesZ(f) = nitin(f, 89, 91.5, 0.03, M, 2, "F_z", 2, 1, 36000, 30, 20, tool, doplot);
+  
   f = "./slot grinding/Metal Bonded/07-11-2018/48000_30_20.lvm";
   forcesY(f) = nitin(f, 87.5, 89.2, 0.03, M, 3, "F_y", -1, 1, 48000, 30, 20, tool, doplot);
   forcesZ(f) = nitin(f, 87.5, 89.2, 0.03, M, 2, "F_z", -1, 1, 48000, 30, 20, tool, doplot);
@@ -120,7 +124,7 @@ function [fmapy, fmapz] = anandita (doplot)
   f = "./slot grinding/Metal Bonded/07-11-2018/24000_150_20.lvm";
   forcesY(f) = nitin(f, 25.4, 26.8, 0.03, M, 3, "F_y", 1, 1, 24000, 150, 20, tool, doplot);
   forcesZ(f) = nitin(f, 25.4, 26.8, 0.03, M, 2, "F_z", 5, 1, 24000, 150, 20, tool, doplot);
-
+  
   # Return force maps
   fmapy = forcesY
   fmapz = forcesZ
@@ -142,6 +146,7 @@ function [fmapy, fmapz] = anandita (doplot)
   
   #abhinav("./slot grinding/Metal Bonded/07-11-2018/12000_30_20.lvm", 89, 3, M, 3, 1);
   #abhinav("./slot grinding/Metal Bonded/07-11-2018/24000_30_20.lvm", 89, 5, M, 3, 1);
+  #abhinav("./slot grinding/Metal Bonded/07-11-2018/36000_30_20.lvm", 89, 5, M, 3, 1);
   #abhinav("./slot grinding/Metal Bonded/07-11-2018/48000_30_20.lvm", 87, 5, M, 3, 1);
   #abhinav("./slot grinding/Metal Bonded/07-11-2018/60000_30_20.lvm", 86, 20, M, 3, 1);
   #abhinav("./slot grinding/Metal Bonded/07-11-2018/24000_30_30.lvm", 89, 4, M, 3, 1);

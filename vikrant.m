@@ -12,19 +12,21 @@ function [] = vikrant (fmapy, axs)
   ################ RPM #########################################################
   f1 = "./slot grinding/N/12000_30_20_slot.lvm";
   f2 = "./slot grinding/N/24000_30_20_slot.lvm";
-  f3 = "./slot grinding/N/48000_30_20_slot.lvm";
-  f4 = "./slot grinding/N/60000_30_20_slot.lvm";
+  f3 = "./slot grinding/N/36000_30_20_slot.lvm";
+  f4 = "./slot grinding/N/48000_30_20_slot.lvm";
+  f5 = "./slot grinding/N/60000_30_20_slot.lvm";
 
-  fy = [fmapy(f1) fmapy(f2) fmapy(f3) fmapy(f4)];
-  rpm = [12000 24000 48000 60000];
+  fy = [fmapy(f1) fmapy(f2) fmapy(f3) fmapy(f4) fmapy(f5)];
+  rpm = [12000 24000 36000 48000 60000];
   plot(rpm, fy, '-sr');
   hold on;
 
   f1 = "./slot grinding/Metal Bonded/07-11-2018/12000_30_20.lvm";
   f2 = "./slot grinding/Metal Bonded/07-11-2018/24000_30_20.lvm";
-  f3 = "./slot grinding/Metal Bonded/07-11-2018/48000_30_20.lvm";
-  f4 = "./slot grinding/Metal Bonded/07-11-2018/60000_30_20.lvm";
-  fy = [fmapy(f1) fmapy(f2) fmapy(f3) fmapy(f4)];
+  f3 = "./slot grinding/Metal Bonded/07-11-2018/36000_30_20.lvm";
+  f4 = "./slot grinding/Metal Bonded/07-11-2018/48000_30_20.lvm";
+  f5 = "./slot grinding/Metal Bonded/07-11-2018/60000_30_20.lvm";
+  fy = [fmapy(f1) fmapy(f2) fmapy(f3) fmapy(f4) fmapy(f5)];
   plot(rpm, fy, '-sb');
   hold on;
   
