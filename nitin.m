@@ -72,7 +72,11 @@ function [force] = nitin (filename, bias, bias_end, range, scaling, column, coln
   bf = fft(b(:, COLUMN));
 
   # Get differential signal (remove lf noise)
-  df = af - bf;  
+  df = af - bf;
+  bfc = bf + 0;
+  bfc(1:5) = 0;
+  idx = find(abs(real(bfc)) > 4)
+  df(idx) = 0;
   idf = real(ifft(df));
   
   # Remove hf/uhf noise
