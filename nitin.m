@@ -7,10 +7,15 @@
 ## Author: Varun Patil <radialapps@gmail.com>
 ## Created: 2018-11-17
 
-function [force] = nitin (filename, bias, bias_end, range, scaling, column, colname, phase, skip, rpm, feed, doc, tool)
-
-  # Start a new graph
-  figure;
+function [force] = nitin (filename, bias, bias_end, range, scaling, column, colname, phase, skip, rpm, feed, doc, tool, doplot)
+  
+  disp(strcat("Processing file ", filename));
+  fflush(stdout);
+  
+  if (doplot)
+    # Start a new graph
+    figure;
+  endif
 
   # Definition of one second
   sec = 10000;
@@ -49,23 +54,25 @@ function [force] = nitin (filename, bias, bias_end, range, scaling, column, coln
   b(:, COLUMN) *= SCALING;
   #b(:, COLUMN) += 1;
   
-  # Construct title
-  my_title = strcat(colname, " vs t (", tool, ")\n");
-  my_title = strcat(my_title, "f=", num2str(feed), "e-6 m/s, d=", num2str(doc));
-  my_title = strcat(my_title, "e-6 m, rpm=", num2str(rpm));
-  title(my_title, "fontsize", 12);
+  if (doplot)
+    # Construct title
+    my_title = strcat(colname, " vs t (", tool, ")\n");
+    my_title = strcat(my_title, "f=", num2str(feed), "e-6 m/s, d=", num2str(doc));
+    my_title = strcat(my_title, "e-6 m, rpm=", num2str(rpm));
+    title(my_title, "fontsize", 12);
   
-  # Set axes labels
-  xlabel("Time (t)", "fontsize", 12);
-  ylabel("Force (N)", "fontsize", 12);
-  hold on;
-  
-  # Plot raw values
-  plot(a(:,1), a(:,COLUMN), 'b')
-  hold on;
+    # Set axes labels
+    xlabel("Time (t)", "fontsize", 12);
+    ylabel("Force (N)", "fontsize", 12);
+    hold on;
+    
+    # Plot raw values
+    plot(a(:,1), a(:,COLUMN), 'b')
+    hold on;
 
-  plot(b(:,1), b(:,COLUMN), 'r')
-  hold on;
+    plot(b(:,1), b(:,COLUMN), 'r')
+    hold on;
+  endif
 
   # Take fourier transforms  
   af = fft(a(:, COLUMN));
@@ -75,7 +82,7 @@ function [force] = nitin (filename, bias, bias_end, range, scaling, column, coln
   df = af - bf;
   bfc = bf + 0;
   bfc(1:5) = 0;
-  idx = find(abs(real(bfc)) > 4)
+  idx = find(abs(real(bfc)) > 4);
   df(idx) = 0;
   idf = real(ifft(df));
   
@@ -90,27 +97,29 @@ function [force] = nitin (filename, bias, bias_end, range, scaling, column, coln
   # Invert originals after noise removal
   iaf = real(ifft(af));
   ibf = real(ifft(bf));
-  
-  # Plot originals with noise removal
-  plot(a(:,1), iaf, 'b')
-  hold on;
-  
-  plot(b(:,1), ibf, 'r')
-  hold on;
-  
-  # Plot final force
-  plot(b(:,1), idf, 'g')
-  hold on;
-  
-  plot(b(:,1), ief, 'k')
-  text(bias, max(idf), strcat("Mean Force=", num2str(mean(ief)), "N"), 'fontsize', 12);
-  # legend("Measured Force", "Measurement Noise", "Measured Force (Base)", "Measurement Noise (Base)", "Grinding Force", "Grinding Force (Filtered)", 'location', 'EastOutside');
-  hold off;
-  
-  # Save the plot
-  print("-dpng", strcat(filename, "_", colname, ".png"));
-  
+
+  if (doplot)  
+    # Plot originals with noise removal
+    plot(a(:,1), iaf, 'b')
+    hold on;
+    
+    plot(b(:,1), ibf, 'r')
+    hold on;
+    
+    # Plot final force
+    plot(b(:,1), idf, 'g')
+    hold on;
+    
+    plot(b(:,1), ief, 'k')
+    text(bias, max(idf), strcat("Mean Force=", num2str(mean(ief)), "N"), 'fontsize', 12);
+    # legend("Measured Force", "Measurement Noise", "Measured Force (Base)", "Measurement Noise (Base)", "Grinding Force", "Grinding Force (Filtered)", 'location', 'EastOutside');
+    hold off;
+    
+    # Save the plot
+    print("-dpng", strcat(filename, "_", colname, ".png"));
+  endif
+    
   # Return and print mean of force
-  force = mean(ief)
+  force = mean(ief);
 
 endfunction
