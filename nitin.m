@@ -69,6 +69,7 @@ function [force] = nitin (filename, bias, bias_end, range, scaling, column, coln
 
   %%Fourier Transform:
   X = fftshift(af);
+  Y = fftshift(bf);
 
   %%Frequency specifications:
   dF = Fs/N;                   % hertz
@@ -83,6 +84,12 @@ function [force] = nitin (filename, bias, bias_end, range, scaling, column, coln
   my_title = strcat(my_title, "e-6 m, rpm=", num2str(rpm));
   title(strcat("Magnitude Response (", colname, ") \n ", my_title));
 
+  hold on;
+
+  plot(f,abs(Y)/N,'r--');
+  hold off;
+
+  legend("Force", "Noise");
   print("-dpng", strcat(filename, "_FFT_", colname, ".png"));
   
   figure;
